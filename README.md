@@ -436,7 +436,7 @@ MIT License - See [LICENSE](LICENSE) for details.
 If you use NEMUS in your research, please cite:
 
 ```bibtex
-@software{nemus2024,
+@software{nemus2025,
   title={NEMUS: NeuroMorphic Unified System},
   author={Charan},
   year={2024},
