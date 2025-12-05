@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nemus"
+version = "1.0.0"
+description = "Event-driven neuromorphic computing library with analytical precision"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+keywords = ["neuromorphic", "spiking-neural-networks", "event-driven", "neuromorphic-computing"]
+authors = [
+  {name = "Charan", email = "yellapragadacharankrishna1234@gmail.com"}
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+  "numpy>=1.20.0",
+  "scikit-learn>=0.24.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=6.0",
+  "pytest-cov>=2.0",
+  "black>=21.0",
+  "flake8>=3.9",
+]
+viz = [
+  "matplotlib>=3.3.0",
+]
+docs = [
+  "sphinx>=4.0",
+  "sphinx-rtd-theme>=0.5",
+]
+
+[project.urls]
+Homepage = "https://github.com/ycharankrishna/NEMUS"
+Documentation = "https://nemus.readthedocs.io"
+Repository = "https://github.com/ycharankrishna/NEMUS"
+Changelog = "https://github.com/ycharankrishna/NEMUS/blob/main/CHANGELOG.md"
+
+[tool.setuptools]
+packages = ["nemus"]
+
+[tool.setuptools.package-data]
+nemus = ["py.typed"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
